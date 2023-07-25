@@ -4,7 +4,22 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "备考手册",
   description: "个人的公务员考试备考手册，包括各科目知识点。",
+  lang: 'zh-CN',
+  // 存储 Markdown 页面的目录，相对于项目根目录
+  srcDir: 'src',
+  // 网站构建的输出位置
+  outDir: 'public',
+  // 静态文件的目录
+  assetsDir: 'static',
+  // 是否启用深色模式
+  appearance: false,
+  // 是否显示上次更新时间
+  lastUpdated: true,
   themeConfig: {
+    // 本地搜索
+    search: {
+      provider: 'local'
+    },
     nav: [
       { text: '首页', link: '/' },
       { text: '行测', link: '/行测/简述' },
